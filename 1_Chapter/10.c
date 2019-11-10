@@ -3,7 +3,7 @@
 int main()
 {
 	int c;
-	while((c = getchar()) != 'q')
+	while((c = getchar()) != EOF)
 	{
 		if(c == '\t')
 			printf("\\t");

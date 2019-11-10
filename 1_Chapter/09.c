@@ -2,9 +2,9 @@
 
 int main()
 {
-	int c, ns;
+	int c = 0, ns = 0;
 
-	while((c = getchar()) != 'q')
+	while((c = getchar()) != EOF)
 	{
 		if(c == ' ' && ns < 1)
 		{

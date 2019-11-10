@@ -7,7 +7,7 @@ int main()
 	tl = 0;
 	nl = 0;
 
-	while((c = getchar()) != 'q')
+	while((c = getchar()) != EOF)
 	{
 		if(c == ' ')
 			++sl;
