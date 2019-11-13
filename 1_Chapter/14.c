@@ -13,17 +13,18 @@ int main()
 	{
 		symbols[c-32]++;
         if(c == '\n')
-        for(int i = 0; i < ASCII_SIZE; i++)
         {
-            putchar(i+32);
-            putchar(' ');
-            for(int j = 0; j < symbols[i]; j++)
-                putchar('*');
-            putchar('\n');
             for(int i = 0; i < ASCII_SIZE; i++)
-                symbols[i] = 0;
+            {
+                putchar(i+32);
+                putchar(' ');
+                for(int j = 0; j < symbols[i]; j++)
+                    putchar('*');
+                putchar('\n');
+            }
+            for(int i = 0; i < ASCII_SIZE; i++)
+                    symbols[i] = 0;
         }
 	}
-    
 	return 0;
 }
