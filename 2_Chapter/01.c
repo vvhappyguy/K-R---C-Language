@@ -9,7 +9,7 @@ long long int pow2(long long int);
 int main(void)
 {
    printFromLib();
-   //  printFromCalculations();
+   printFromCalculations();
    return 0;
 }
 
@@ -24,6 +24,11 @@ void printFromLib(void)
    printf("uint   MIN=%20d MAX=%20u\n", 0, UINT_MAX);
    printf("long   MIN=%20ld MAX=%20ld\n", LONG_MIN, LONG_MAX);
    printf("ulong  MIN=%20d MAX=%20lu\n", 0, ULONG_MAX);
+
+   printf("FLOATs\n");
+   printf("float  MIN=%20e MAX=%20e\n", FLT_MIN, FLT_MAX);
+   printf("double float  MIN=%20e MAX=%20e\n", DBL_MIN, DBL_MAX);
+   printf("long double  MIN=%20Le MAX=%20Le\n", LDBL_MIN, LDBL_MAX);
 }
 
 
@@ -49,9 +54,12 @@ void printFromCalculations(void)
    s--;
    printf("ushort   MIN=%20d MAX=%20d\n", 0, s);
 
-      printf("long int   MIN=%20lld MAX=%20lld\n", SIGNED_MAX(long int) * -1 - 1, SIGNED_MAX(long int));
 
    unsigned long int l = 0;
    l--;
-   printf("ulong   MIN=%20d MAX=%20llu\n", 0, s);
+   printf("ulong   MIN=%20d MAX=%20lu\n", 0, l);
+   l = l / 2 + 1;
+   printf("long   MIN=%20ld MAX=%20ld\n", -1 * l, l - 1);
+
+   // Can calculate floats using only bit mask of number in computer memory.
 }
